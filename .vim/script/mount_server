@@ -1,0 +1,3 @@
+#sudo mount -t cifs //172.21.26.250/builders\SSD\HOME /mnt/SERVER/ -o user=builder,pass=builder,rw
+sshfs hdkim@172.21.26.250:/home/SSD/hdkim/ /mnt/SSH_SERVER/
+sshfs khd0801@172.21.26.251:/volume1/khd0801/ /mnt/SSH_COMMON/
