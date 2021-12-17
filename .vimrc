@@ -334,6 +334,9 @@ nnoremap <silent> <Leader>_ :exe "resize " . (winheight(0) * 2/3)<CR>
 nnoremap <silent> <Leader>} :exe "vertical resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>{ :exe "vertical resize " . (winheight(0) * 2/3)<CR>
 
+nnoremap K kzz
+nnoremap J jzz
+
 
 "-----------------------------------------------------------------------"
 " User  환경설정 
