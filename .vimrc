@@ -301,12 +301,12 @@ let mapleader = ","
 " 원래 이 단축키로 바인딩해 두었던 :tabnew를 대체한다.
 nmap <leader>N :enew<cr>
 " 다음 버퍼로 이동
-nnoremap <leader>q :bp<CR>
+nnoremap <leader>z :bp<CR>
 " 이전 버퍼로 이동
-nnoremap <leader>w :bn<CR>
+nnoremap <leader>x :bn<CR>
 " 현재 버퍼를 닫고 이전 버퍼로 이동
 " 탭 닫기 단축키를 대체한다.
-nmap <leader>bq :bp <BAR> bd #<CR>
+nmap <leader>bz :bp <BAR> bd #<CR>
 
 " 모든 버퍼와 각 버퍼 상태 출력
 nmap <leader>bl :ls<CR>
@@ -509,15 +509,15 @@ map  <Leader>m <Plug>(easymotion-bd-f)
 nmap <Leader>m <Plug>(easymotion-overwin-f)
 
 " s{char}{char} to move to {char}{char}
-"nmap s <Plug>(easymotion-overwin-f2)
+nmap s <Plug>(easymotion-overwin-f2)
 
 " Move to line
 map <Leader>L <Plug>(easymotion-bd-jk)
 nmap <Leader>L <Plug>(easymotion-overwin-line)
 
 " Move to word
-"map  <Leader>w <Plug>(easymotion-bd-w)
-"nmap <Leader>w <Plug>(easymotion-overwin-w)
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 let g:EasyMotion_smartcase = 1
 
@@ -538,7 +538,6 @@ endfunction
 "noremap <silent><expr> ?  incsearch#go(<SID>incsearch_config({'command': '?'}))
 "noremap <silent><expr> g/ incsearch#go(<SID>incsearch_config({'is_stay': 1}))
 
-kk
 
 "-----------------------------------------------------------------------"
 " NERDTree 설정	
@@ -561,45 +560,28 @@ kk
 "-----------------------------------------------------------------------"
 " 변수 자동완성 기능
 "-----------------------------------------------------------------------"
-"function! InsertTabWrapper()
-"	let col = col('.') - 1
-"	if !col || getline('.')[col-1]!~'\k'
-"		return "\<TAB>"
-"	else
-"		if pumvisible()
-"			return "\<C-P>"
-"		else
-"			return "\<C-N>\<C-P>"
-"		end
-"	endif
-"endfunction
-"
-"inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-"inoremap <expr> <CR> pumvisible() ? "<C-Y><CR>" : "<CR>"
-
-
 function! InsertTabWrapper()
- let col = col('.') - 1
- if !col || getline('.')[col-1]!~'\k'
- return "\<TAB>"
- else
- if pumvisible()
- return "\<C-N>"
- else
- return "\<C-N>\<C-P>"
- end
- endif
+	let col = col('.') - 1
+	if !col || getline('.')[col-1]!~'\k'
+		return "\<TAB>"
+	else
+		if pumvisible()
+			return "\<C-P>"
+		else
+			return "\<C-N>\<C-P>"
+		end
+	endif
 endfunction
 
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <expr> <CR> pumvisible() ? "<C-Y><CR>" : "<CR>"
  
 hi Pmenu ctermbg=blue
 hi PmenuSel ctermbg=yellow ctermfg=black
 hi PmenuSbar ctermbg=blue
 
 " If you want :UltiSnipsEdit to split your window.
-" let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<C-a>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsEditSplit="vertical"
