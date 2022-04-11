@@ -127,11 +127,11 @@ filetype plugin indent on     " required!
 	" vim:set fenc=utf-8 tw=0:
 	" Vim setting for sirini
 
-	" Vim 전용 기능 사용
+	" Vim 전용 기능 사용 vi 호환성을 없앰
 	set nocp
 
 	" 옵션 복원
-	set all&
+	"set all&
 
 	" 명령어 기록 갯수
 	set hi=100
@@ -203,7 +203,7 @@ filetype plugin indent on     " required!
 	set nows
 
 	" 검색시 대소문자 구별 안함
-	set ic
+	" set ic
 
 	" 스마트한 대소문자 구별 기능 사용
 	set scs
@@ -228,9 +228,10 @@ filetype plugin indent on     " required!
 	"마우스 자동
 	set mouse=a
 
-	set exrc
+	"set exrc
 
-	set wmnu
+    	"Tab 자동완성시 가능한 목록을 보여 줌
+	set wmnu 
 	
 	"클립보드 복사
 	"set cb=unnamed
