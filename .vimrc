@@ -635,6 +635,8 @@ let g:ctrlp_custom_ignore = {
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 
+nnoremap <Leader>h :noh<CR>
+
 "-----------------------------------------------------------------------"
 " smooth-scroll
 "-----------------------------------------------------------------------"
