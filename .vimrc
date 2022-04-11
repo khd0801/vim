@@ -405,8 +405,9 @@ nnoremap J jzz
 	let NERDTreeWinPos = "left"		" NERD Tree위치 = 왼쪽
 	nmap  <C-F> :NERDTreeFind<CR>  	" Ctrl + F Find Current File
 	"nmap  <F9> :NERDTreeToggle<CR>	" F9 Key = NERD Tree Toggle
-
-
+	nmap  <C-E> :NERDTreeToggle<CR> " Ctrl + E  NERDtree Toggle 
+    
+    
 "-----------------------------------------------------------------------"
 " cscope 설정 값
 "-----------------------------------------------------------------------"
