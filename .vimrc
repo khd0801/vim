@@ -575,7 +575,6 @@ function! InsertTabWrapper()
 endfunction
 
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <expr> <CR> pumvisible() ? "<C-Y><CR>" : "<CR>"
  
 hi Pmenu ctermbg=blue
 hi PmenuSel ctermbg=yellow ctermfg=black
