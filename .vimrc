@@ -38,7 +38,8 @@ call vundle#begin()
     Plugin 'iberianpig/tig-explorer.vim'
 
     "파일 저장시 문법 검사하여 에러를 띄워 줌.
-	Plugin 'scrooloose/syntastic'
+	"Plugin 'scrooloose/syntastic'
+	Plugin 'vim-syntastic/syntastic'
 
      "주석 포맷 만들어 줌.
 	Plugin 'DoxygenToolkit.vim'
@@ -447,32 +448,33 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
+let g:syntastic_check_on_wq = 0
 
 let g:syntastic_c_remove_include_errors = 1
 let g:syntastic_cpp_remove_include_errors = 1
 let g:syntastic_c_no_include_search = 1
 
 "let g:syntastic_cpp_check_header = 0
-"let g:syntastic_c_check_header = 0
+let g:syntastic_c_check_header = 1
 
 "let g:syntastic_c_config_file = '.vrs_include_file_for_syntastic'
-let g:syntastic_c_config_file = '.syntastic_header_config.conf'
+"let g:syntastic_c_config_file = '.syntastic_header_config.conf'
 
 let g:syntastic_c_compiler = 'gcc'
 let g:syntastic_c_compiler_options = "-std=c11 -Wall -Wextra -Wpedantic"
 
 "let g:syntastic_c_auto_refresh_includes = 1
-"let g:syntastic_c_include_dirs = [ '-I../include', '-Iinclude' ]
+let g:syntastic_c_include_dirs = [ 'include', 'inc' ]
 
 "let g:syntastic_cpp_compiler = 'g++'
 "let g:syntastic_cpp_compiler_options = "-std=c++11 -Wall -Wextra -Wpedantic"
 "let g:syntastic_cpp_config_file = '.vrs_include_file_for_syntastic'
-let g:syntastic_cpp_no_include_search = 1
+"let g:syntastic_cpp_no_include_search = 1
 "let g:syntastic_cpp_no_default_include_dirs = 1
 
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': []  }
-nnoremap <C-w>e :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+nnoremap <C-m>e :SyntasticCheck<CR> 
+nnoremap <C-m>c :SyntasticToggleMode<CR>
 
 "-----------------------------------------------------------------------"
 " Tig 설정	
