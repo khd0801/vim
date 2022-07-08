@@ -1,3 +1,4 @@
 vim이 설치 되어 있지 않은 컴퓨터에서 해당 vim, vimrc를 받고 아래 명령어로 Vundle을 받아줘야 함.
 
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+youcompleteme 사용시 sudo apt install vim-youcompleteme 설치가 필요 함. 
