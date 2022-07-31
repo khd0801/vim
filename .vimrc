@@ -68,6 +68,9 @@ call vundle#begin()
 
     "vim-bitbake
     Plugin 'kergoth/vim-bitbake'
+	
+	"bufexplorer
+	Plugin 'bufexplorer.zip'
 
     "문자열 찾기.
 	"Plugin 'rking/ag.vim' 
