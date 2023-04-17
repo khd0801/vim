@@ -8,107 +8,107 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 	" let Vundle manage Vundle
-	" required! 
+	" required!
 	Plugin 'VundleVim/Vundle.vim'
 
-    " vim 화면을 좀 더 예쁘게 구성해주는 플러그인 
-	Plugin 'vim-airline/vim-airline' 
+	" vim 화면을 좀 더 예쁘게 구성해주는 플러그인
+	Plugin 'vim-airline/vim-airline'
 	Plugin 'vim-airline/vim-airline-themes'
-    
-    "파일 및 폴더 탐색시 사용합니다
-    Plugin 'ctrlp.vim' 
 
-    "Gblame 사용 가능하게 함.
-    Plugin 'tommcdo/vim-fugitive-blame-ext' 
+	"파일 및 폴더 탐색시 사용합니다
+	Plugin 'ctrlp.vim'
 
-    " 함수나 구조체 클래스 변수 선언들을 참조하고 싶을 때 사용하는 플러그인입니다 
-	Plugin 'ctags.vim' 
-	
+	"Gblame 사용 가능하게 함.
+	Plugin 'tommcdo/vim-fugitive-blame-ext'
+
+	" 함수나 구조체 클래스 변수 선언들을 참조하고 싶을 때 사용하는 플러그인입니다
+	Plugin 'ctags.vim'
+
 	" 명령어 자동완성 플러그인입니다 (inc + <tab> : #include <>)
-    Plugin 'honza/vim-snippets'  
-	Plugin 'SirVer/ultisnips'
+	Plugin 'honza/vim-snippets'
+	"Plugin 'SirVer/ultisnips'
 
-    " [] {} 등 괄호 입력시 자동으로 닫아주는 플러그인
-	Plugin 'jiangmiao/auto-pairs' 
-   
-    " git project에서 수정,추가,제거된 라인을 표시해주는 gitgutter for Vim
+	" [] {} 등 괄호 입력시 자동으로 닫아주는 플러그인
+	Plugin 'jiangmiao/auto-pairs'
+
+	" git project에서 수정,추가,제거된 라인을 표시해주는 gitgutter for Vim
 	Plugin 'airblade/vim-gitgutter'
 
-    "vim과 tig switching
-    Plugin 'iberianpig/tig-explorer.vim'
+	"vim과 tig switching
+	Plugin 'iberianpig/tig-explorer.vim'
 
-    "파일 저장시 문법 검사하여 에러를 띄워 줌.
+	"파일 저장시 문법 검사하여 에러를 띄워 줌.
 	"Plugin 'scrooloose/syntastic'
 	Plugin 'vim-syntastic/syntastic'
 
-     "주석 포맷 만들어 줌.
+	"주석 포맷 만들어 줌.
 	Plugin 'DoxygenToolkit.vim'
-	
-    "Plugin 'scrooloose/nerdtree'
+
+	"Plugin 'scrooloose/nerdtree'
 	Plugin 'The-NERD-tree'
-	
-    "\+c 누른 후 space를 누르면 블럭으로 색깔 칠해져 있는 것들 주석 처리 됨	
-    "주석을 달아 줌
-    Plugin 'preservim/nerdcommenter'
 
-    " C++, Python 등 언어의 자동완성 플러그인 
+	",+c 누른 후 space를 누르면 블럭으로 색깔 칠해져 있는 것들 주석 처리 됨
+	"주석을 달아 줌
+	Plugin 'preservim/nerdcommenter'
+
+	" C++, Python 등 언어의 자동완성 플러그인
 	Plugin 'AutoComplPop'
-	Plugin 'ycm-core/youcompleteme'  
-	Plugin 'rdnetto/ycm-generator' 
+	"Plugin 'ycm-core/youcompleteme'
+	"Plugin 'rdnetto/ycm-generator'
 	Plugin 'OmniCppComplete'
-    
-    "vim-smooth-scroll
-    Plugin 'terryma/vim-smooth-scroll'
-   
-    "fzf 파일 찾기
-    Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
-    "vim corlor/scheme
-    Plugin 'morhetz/gruvbox'
+	"vim-smooth-scroll
+	Plugin 'terryma/vim-smooth-scroll'
 
-    "vim-bitbake
-    Plugin 'kergoth/vim-bitbake'
-	
+	"fzf 파일 찾기
+	Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plugin 'junegunn/fzf.vim'
+	"vim corlor/scheme
+	Plugin 'morhetz/gruvbox'
+
+	"vim-bitbake
+	Plugin 'kergoth/vim-bitbake'
+
 	"bufexplorer
 	Plugin 'bufexplorer.zip'
 
-    "문자열 찾기.
-	"Plugin 'rking/ag.vim' 
-    "ACk(grep)
-    "Plugin 'burntsushi/ripgrep'
-    "Plugin 'mileszs/ack.vim'
-    "Plugin 'majutsushi/tagbar'
-    "Plugin 'jremmen/vim-ripgrep'
-    Plugin 'miki725/vim-ripgrep'
-    
+	"문자열 찾기.
+	"Plugin 'rking/ag.vim'
+	"ACk(grep)
+	"Plugin 'burntsushi/ripgrep'
+	"Plugin 'mileszs/ack.vim'
+	"Plugin 'majutsushi/tagbar'
+	"Plugin 'jremmen/vim-ripgrep'
+	Plugin 'miki725/vim-ripgrep'
 
-    "하단에 해당 함수의 를 보여 줌.
+
+	"하단에 해당 함수의 를 보여 줌.
 	Plugin 'wesleyche/srcexpl'
 
-    "cscope 설정
-    Plugin 'cscope_plus.vim' 
+	"cscope 설정
+	Plugin 'cscope_plus.vim'
 
 	"열려 있는 소스파일의 클래스, 함수 변수 정보 창
-    Plugin 'taglist.vim'	
-	
-    "마지막에 작업한 솔루션 또는 파일 리스트 중 바로 열수 있음
-    Plugin 'mhinz/vim-startify'
+	Plugin 'taglist.vim'
 
-    "원하는 터미널의 단어로 바로 이동
-    Plugin 'easymotion/vim-easymotion'
+	"마지막에 작업한 솔루션 또는 파일 리스트 중 바로 열수 있음
+	Plugin 'mhinz/vim-startify'
+
+	"원하는 터미널의 단어로 바로 이동
+	Plugin 'easymotion/vim-easymotion'
 
 	" original repos on github
 	Plugin 'tpope/vim-fugitive'
 
-    "HTML Code Faster
-    Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+	"HTML Code Faster
+	Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
-    "Web Application Development framework
-    Plugin 'tpope/vim-rails.git'
-    Plugin 'vim-ruby/vim-ruby'
+	"Web Application Development framework
+	Plugin 'tpope/vim-rails.git'
+	Plugin 'vim-ruby/vim-ruby'
 
-    "Find file(need ruby)
-    "Plugin 'wincent/command-t'
+	"Find file(need ruby)
+	"Plugin 'wincent/command-t'
 
 	" ...
 
@@ -162,10 +162,10 @@ filetype plugin indent on     " required!
 	set nuw=5
 
 	" 탭 크기 설정
-	set tabstop=4
-	set softtabstop=4
-	set shiftwidth=4
-	set expandtab "탭 대신 스페이스바로 채워 넣음
+	set tabstop=8
+	set softtabstop=8
+	set shiftwidth=8
+	"set expandtab "탭 대신 스페이스바로 채워 넣음
 
 	autocmd FileType make setlocal noexpandtab "Makeile은 tab 문법이기 때문에 스페이스바 대체 안함
 
@@ -175,9 +175,9 @@ filetype plugin indent on     " required!
 
 	" 자동 줄바꿈 안함
 	"set nowrap
-    set wrap "문자열이 길어 화면에 다 표시 안될 때 자동으로 줄바꿈 하여 보여줌
-    set linebreak
-    set showbreak=+++\
+	set wrap "문자열이 길어 화면에 다 표시 안될 때 자동으로 줄바꿈 하여 보여줌
+	set linebreak
+	set showbreak=+++\
 
 	" 자동 들여쓰기
 	set autoindent
@@ -235,8 +235,8 @@ filetype plugin indent on     " required!
 	"set exrc
 
     	"Tab 자동완성시 가능한 목록을 보여 줌
-	set wmnu 
-	
+	set wmnu
+
 	"클립보드 복사
 	"set cb=unnamed
 	"set clipboard=unnamed "use OS clipboard
@@ -248,25 +248,25 @@ filetype plugin indent on     " required!
 	"파일 타입 설정
 	set encoding=utf-8
 	set fileencodings=utf-8,cp949
-	
+
 	"set termguicolors
 	"color evening
 
-    " 키워드 입력시 점진적 검색
-    set incsearch
+	" 키워드 입력시 점진적 검색
+	set incsearch
 
-    " vi 편집기록 기억 갯수 .viminfo에 기록
-    set history=1000
+	" vi 편집기록 기억 갯수 .viminfo에 기록
+	set history=1000
 
 	autocmd VimLeave * call system("xsel -ib", getreg('+'))
 
 "-----------------------------------------------------------------------"
-" ctags database path 설정 
+" ctags database path 설정
 "-----------------------------------------------------------------------"
 	set tag=./tags;/
 
 "-----------------------------------------------------------------------"
-" ctags database path 설정 
+" ctags database path 설정
 "-----------------------------------------------------------------------"
 set background=dark
 let g:gruvbox_contrast_dark = 'soft'
@@ -281,9 +281,13 @@ let g:gruvbox_termcolors=1
 let g:gruvbox_color_column='aqua'
 colorscheme gruvbox
 
+"-----------------------------------------------------------------------"
+" Delete White Space
+"-----------------------------------------------------------------------"
+autocmd BufWritePre * %s/\s\+$//e
 
 "-----------------------------------------------------------------------"
-" cscope database path 설정 
+" cscope database path 설정
 "-----------------------------------------------------------------------"
 	function! LoadCscope()
 		let db = findfile("cscope.out", ".;")
@@ -323,9 +327,9 @@ nmap <leader>f :FZF<cr>
 
 "Rg excute
 "Input Pattern
-nmap <leader>r :Rg<Space>
+nmap <leader>r :RG<Space>
 "Input cursor location
-nmap <leader>R :Rg<cr>
+nmap <leader>R :RG <C-R>=expand("<cword>")<CR><CR>
 
 
 " Key Setting - resize windows
@@ -344,7 +348,7 @@ nnoremap J jzz
 
 
 "-----------------------------------------------------------------------"
-" User  환경설정 
+" User  환경설정
 "-----------------------------------------------------------------------"
 	nmap <F2> v]}zf
 	nmap <F3> :Gblame<cr>
@@ -354,11 +358,11 @@ nnoremap J jzz
 	nmap <F7> :TlistToggle<CR>			" F7 key = Tag List Toggle
 	nmap <F8> :SrcExplToggle<CR>		" F8 key = SrcExpl TOggle
 	"nmap <F10> :let g:view_source = 0<CR>
-    nmap <F10> :!rm -rf cscope.files <CR> :!find . \( -name '*.c' -o -name '*.cpp' -o -name '*.cc' -o -name '*.h' -o -name '*.s' -o -name '*.S' \) -print > cscope.files <CR> :!cscope -i cscope.files <CR><CR>
-    map <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q ./ <CR><CR>
+	nmap <F10> :!rm -rf cscope.files <CR> :!find . \( -name '*.c' -o -name '*.cpp' -o -name '*.cc' -o -name '*.h' -o -name '*.s' -o -name '*.S' \) -print > cscope.files <CR> :!cscope -i cscope.files <CR><CR>
+	map <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q ./ <CR><CR>
 
 "-----------------------------------------------------------------------"
-" Tag List 환경설정 
+" Tag List 환경설정
 "-----------------------------------------------------------------------"
 	filetype on				" vim filetype on
 	let Tlist_Ctags_Cmd = "/usr/bin/ctags"	" ctags 프로그램 위치
@@ -376,26 +380,26 @@ nnoremap J jzz
 "	nmap  <C-K> <C-W>k					" 상단 창으로 이동
 "	nmap  <C-L> <C-W>l					" 오른쪽 창으로 이동
 
-	let g:SrcExpl_winHeight = 12		" SrcExpl 윈도우 높이 지정
-	let g:SrcExpl_refreshTime = 100		" refreshing time = 100ms
-	let g:SrcExpl_jumpKey = "<ENTER>"		" 해당 definition으로 jump
-	let g:SrcExpl_gobackKey = "<SPACE>"		" back
+	let g:SrcExpl_winHeight = 12				" SrcExpl 윈도우 높이 지정
+	let g:SrcExpl_refreshTime = 100				" refreshing time = 100ms
+	let g:SrcExpl_jumpKey = "<ENTER>"			" 해당 definition으로 jump
+	let g:SrcExpl_gobackKey = "<SPACE>"			" back
     let g:SrcExpl_pluginList = [
             \ "__Tag_List__",
             \ "_NERD_tree_",
             \ "Source_Explorer"
         \ ]
-    " // Enable/Disable the local definition searching, and note that this is not 
-    " // guaranteed to work, the Source Explorer doesn't check the syntax for now. 
-    " // It only searches for a match with the keyword according to command 'gd' 
-    let g:SrcExpl_searchLocalDef = 1 
+    " // Enable/Disable the local definition searching, and note that this is not
+    " // guaranteed to work, the Source Explorer doesn't check the syntax for now.
+    " // It only searches for a match with the keyword according to command 'gd'
+    let g:SrcExpl_searchLocalDef = 1
 
     " // Workaround for Vim bug @https://goo.gl/TLPK4K as any plugins using autocmd for
     " // BufReadPre might have conflicts with Source Explorer. e.g. YCM, Syntastic etc.
     let g:SrcExpl_nestedAutoCmd = 1
 
-    " // Do not let the Source Explorer update the tags file when opening 
-    let g:SrcExpl_isUpdateTags = 0 
+    " // Do not let the Source Explorer update the tags file when opening
+    let g:SrcExpl_isUpdateTags = 0
 
     " // The color schemes used by Source Explorer. There are five color schemes
     " // supported for now - Red, Cyan, Green, Yellow and Magenta. Source Explorer
@@ -409,9 +413,9 @@ nnoremap J jzz
 	let NERDTreeWinPos = "left"		" NERD Tree위치 = 왼쪽
 	nmap  <C-F> :NERDTreeFind<CR>  	" Ctrl + F Find Current File
 	"nmap  <F9> :NERDTreeToggle<CR>	" F9 Key = NERD Tree Toggle
-	nmap  <C-E> :NERDTreeToggle<CR> " Ctrl + E  NERDtree Toggle 
-    
-    
+	nmap  <C-E> :NERDTreeToggle<CR> " Ctrl + E  NERDtree Toggle
+
+
 "-----------------------------------------------------------------------"
 " cscope 설정 값
 "-----------------------------------------------------------------------"
@@ -430,16 +434,17 @@ set csverb
 
 
 "-----------------------------------------------------------------------"
-" cscope 단축키 설정	
+" cscope 단축키 설정
 "-----------------------------------------------------------------------"
-    nmap <C-\>s :scs find s <C-R>=expand("<cword>")<CR><CR>	"함수명과 일치하는 심볼을 모두 찾을 때
-    nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>	"함수가 정의된 곳을 찾을 때
-    nmap <C-\>c :scs find c <C-R>=expand("<cword>")<CR><CR>	"함수를 호출하는 곳 찾을 때
-    nmap <C-\>t :scs find t <C-R>=expand("<cword>")<CR><CR>	"텍스트 스트링 찾기"
-    nmap <C-\>e :scs find e <C-R>=expand("<cword>")<CR><CR>	"정규표현식 패턴으로 찾기
-    nmap <C-\>f :scs find f <C-R>=expand("<cfile>")<CR><CR> "파일 찾기	
-    nmap <C-\>i :scs find i <C-R>=expand("<cfile>")<CR><CR>	"헤더파일 찾기
-    nmap <C-\>d :scs find d <C-R>=expand("<cword>")<CR><CR> "지정된 함수가 그 안에서 부르는 함수 찾기
+    nmap <C-\>s :scs find s <C-R>=expand("<cword>")<CR><CR>		"함수명과 일치하는 심볼을 모두 찾을 때
+    nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>		"함수가 정의된 곳을 찾을 때
+    nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>		"함수를 호출하는 곳 찾을 때
+    nmap <C-\>cv :vert scs find c <C-R>=expand("<cword>")<CR><CR>	"함수를 호출하는 곳 찾을 때
+    nmap <C-\>t :scs find t <C-R>=expand("<cword>")<CR><CR>		"텍스트 스트링 찾기"
+    nmap <C-\>e :scs find e <C-R>=expand("<cword>")<CR><CR>		"정규표현식 패턴으로 찾기
+    nmap <C-\>f :scs find f <C-R>=expand("<cfile>")<CR><CR>		"파일 찾기
+    nmap <C-\>i :scs find i <C-R>=expand("<cfile>")<CR><CR>		"헤더파일 찾기
+    nmap <C-\>d :scs find d <C-R>=expand("<cword>")<CR><CR>		"지정된 함수가 그 안에서 부르는 함수 찾기
 
 
 "-----------------------------------------------------------------------"
@@ -476,11 +481,11 @@ let g:syntastic_c_include_dirs = [ 'include', 'inc' ]
 "let g:syntastic_cpp_no_default_include_dirs = 1
 
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': []  }
-nnoremap <C-m>e :SyntasticCheck<CR> 
+nnoremap <C-m>e :SyntasticCheck<CR>
 nnoremap <C-m>c :SyntasticToggleMode<CR>
 
 "-----------------------------------------------------------------------"
-" Tig 설정	
+" Tig 설정
 "-----------------------------------------------------------------------"
 " open tig with current file
 nnoremap <Leader>T :TigOpenCurrentFile<CR>
@@ -507,7 +512,7 @@ let g:tig_explorer_use_builtin_term = 1
 
 
 "-----------------------------------------------------------------------"
-" easymotion 설정	
+" easymotion 설정
 "-----------------------------------------------------------------------"
 map <Leader> <Plug>(easymotion-prefix)
 
@@ -547,7 +552,7 @@ endfunction
 
 
 "-----------------------------------------------------------------------"
-" NERDTree 설정	
+" NERDTree 설정
 "-----------------------------------------------------------------------"
 "let g:NERDTreeIndicatorMapCustom = {
 "    \ "Modified"  : "✹",
@@ -560,7 +565,7 @@ endfunction
 "    \ "Clean"     : "✔︎",
 "    \ "Ignored"   : "☒",
 "    \ "Unknown"   : "?"
-"    \ 
+"    \
 "}
 "let g:NERDTreeShowIgnoredStatus = 1
 
@@ -581,7 +586,7 @@ function! InsertTabWrapper()
 endfunction
 
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
- 
+
 hi Pmenu ctermbg=blue
 hi PmenuSel ctermbg=yellow ctermfg=black
 hi PmenuSbar ctermbg=blue
@@ -619,7 +624,7 @@ let OmniCpp_ShowPrototypeInAbbr = 1 " show function prototype (i.e.parameters) i
 set tags+=./tags
 
 "-----------------------------------------------------------------------"
-" 파일 탐색 속도 향상 
+" 파일 탐색 속도 향상
 "-----------------------------------------------------------------------"
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|public$\|log$\|tmp$\|vendor$',
@@ -669,7 +674,7 @@ let g:airline_highlighting_cache = 1
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme= 'minimalist'
-let g:airline_section_y = '' 
+let g:airline_section_y = ''
 let g:airline_section_warning= '' "마지막 status창 사용 안함
 " 버퍼 목록 켜기
 " 이 옵션은 버퍼를 수정한 직후 버퍼를 감춰지도록 한다.
@@ -678,7 +683,7 @@ set hidden
 
 
 "-----------------------------------------------------------------------"
-" YCM Option 
+" YCM Option
 "-----------------------------------------------------------------------"
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/youcompleteme/third_party/ycmd/examples/.ycm_extra_conf.py'
 "let g:ycm_confirm_extra_conf = 1
@@ -703,7 +708,7 @@ let g:ycm_auto_treigger = 1
 "nnoremap gg :YcmCompleter GoToImprecise
 "nnoremap d :YcmCompleter GoToDeclaration
 "nnoremap t :YcmCompleter GetType
-"nnoremap p :YcmCompleter GetParent 
+"nnoremap p :YcmCompleter GetParent
 
 "nmap <leader>d :YcmCompleter GoToDeclaration<cr>
 "nmap <leader>g :YcmCompleter GoTo<cr>
@@ -726,4 +731,59 @@ let g:ycm_auto_treigger = 1
 " Runtime Path Manipulation
 "-----------------------------------------------------------------------"
 "let g:indent_guides_enable_on_vim_startup = 1
+
+"-----------------------------------------------------------------------"
+" fzf layout
+"-----------------------------------------------------------------------""
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
+
+"let $FZF_DEFAULT_OPTS = '--layout=reverse --inline-info'
+let $FZF_DEFAULT_OPTS = '--inline-info'
+let $FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git/**'"
+
+" Customize fzf colors to match your color scheme
+" - fzf#wrap translates this to a set of `--color` options
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+"Get Files
+command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--inline-info']}), <bang>0)
+
+" Get text in files with Rg
+" command! -bang -nargs=* Rg
+"   \ call fzf#vim#grep(
+"   \   "rg --column --line-number --no-heading --color=always --smart-case --glob '!.git/**' ".shellescape(<q-args>), 1,
+
+ " Make Ripgrep ONLY search file contents and not filenames
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --hidden --smart-case --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'up:60%')
+  \           : fzf#vim#with_preview({'options': '--delimiter : --nth 4.. -e'}, 'right:50%', '?'),
+  \   <bang>0)
+
+" Ripgrep advanced
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
+
+command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
+
 execute pathogen#infect()
