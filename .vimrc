@@ -380,33 +380,51 @@ nnoremap J jzz
 "	nmap  <C-K> <C-W>k					" 상단 창으로 이동
 "	nmap  <C-L> <C-W>l					" 오른쪽 창으로 이동
 
-	let g:SrcExpl_winHeight = 12				" SrcExpl 윈도우 높이 지정
-	let g:SrcExpl_refreshTime = 100				" refreshing time = 100ms
-	let g:SrcExpl_jumpKey = "<ENTER>"			" 해당 definition으로 jump
-	let g:SrcExpl_gobackKey = "<SPACE>"			" back
-    let g:SrcExpl_pluginList = [
-            \ "__Tag_List__",
-            \ "_NERD_tree_",
-            \ "Source_Explorer"
+nmap <F8> :SrcExplToggle<CR>            " F8 key = SrcExpl TOggle
+
+let g:SrcExpl_winHeight = 12            " SrcExpl 윈도우 높이 지정
+let g:SrcExpl_refreshTime = 100         " refreshing time = 100ms
+let g:SrcExpl_jumpKey = "<ENTER>"       " 해당 definition으로 jump
+let g:SrcExpl_gobackKey = "<SPACE>"     " back
+let g:SrcExpl_pluginList = [
+        \ "__Tag_List__",
+        \ "_NERD_tree_",
+        \ "Source_Explorer"
         \ ]
-    " // Enable/Disable the local definition searching, and note that this is not
-    " // guaranteed to work, the Source Explorer doesn't check the syntax for now.
-    " // It only searches for a match with the keyword according to command 'gd'
-    let g:SrcExpl_searchLocalDef = 1
 
-    " // Workaround for Vim bug @https://goo.gl/TLPK4K as any plugins using autocmd for
-    " // BufReadPre might have conflicts with Source Explorer. e.g. YCM, Syntastic etc.
-    let g:SrcExpl_nestedAutoCmd = 1
+" // The color schemes used by Source Explorer. There are five color schemes
+" // supported for now - Red, Cyan, Green, Yellow and Magenta. Source Explorer
+" // will pick up one of them randomly when initialization.
+let g:SrcExpl_colorSchemeList = [
+        \ "Cyan",
+    \ ]
 
-    " // Do not let the Source Explorer update the tags file when opening
-    let g:SrcExpl_isUpdateTags = 0
+" // Enable/Disable the local definition searching, and note that this is not
+" // guaranteed to work, the Source Explorer doesn't check the syntax for now.
+" // It only searches for a match with the keyword according to command 'gd'
+let g:SrcExpl_searchLocalDef = 1
 
-    " // The color schemes used by Source Explorer. There are five color schemes
-    " // supported for now - Red, Cyan, Green, Yellow and Magenta. Source Explorer
-    " // will pick up one of them randomly when initialization.
-    let g:SrcExpl_colorSchemeList = [
-            \ "Cyan",
-        \ ]
+" // Workaround for Vim bug @https://goo.gl/TLPK4K as any plugins using autocmd for
+" // BufReadPre might have conflicts with Source Explorer. e.g. YCM, Syntastic etc.
+let g:SrcExpl_nestedAutoCmd = 1
+
+" // Do not let the Source Explorer update the tags file when opening
+let g:SrcExpl_isUpdateTags = 0
+
+" // Use 'Exuberant Ctags' with '--sort=foldcase -R .' or '-L cscope.files' to
+" // create/update the tags file
+let g:SrcExpl_updateTagsCmd = "ctags --sort=foldcase -R ."
+
+" // Set "<F12>" key for updating the tags file artificially
+let g:SrcExpl_updateTagsKey = "<F12>"
+
+" // Set "<F3>" key for displaying the previous definition in the jump list
+let g:SrcExpl_prevDefKey = "<S-K>"
+
+" // Set "<F4>" key for displaying the next definition in the jump list
+let g:SrcExpl_nextDefKey = "<S-J>"
+
+
 "-----------------------------------------------------------------------"
 " NERD Tree 환경설정
 "-----------------------------------------------------------------------"
