@@ -351,7 +351,7 @@ nnoremap J jzz
 " User  환경설정
 "-----------------------------------------------------------------------"
 	nmap <F2> v]}zf
-	nmap <F3> :Gblame<cr>
+	nmap <F3> :Git blame<cr>
 	nmap <F4> :w<cr> : make<cr> : ccl<cr>  cw<cr> "F4 누를 경우 컴파일(Makeile있어야 함.)
 	nmap <F5> :norm I//<cr> "F5 누를시 현재 라인 주석, 범위 설정 후 누르면 범위 주석
 	nmap <F6> :norm ^xx<cr> "F6 누를시 주석 해제
